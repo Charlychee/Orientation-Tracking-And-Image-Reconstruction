@@ -61,6 +61,6 @@ This can be solved by projected gradient descent:
 ```
 
 ## Image Reconstruction
-We make the assumption that a given image lies on a sphere of radius 1 meter away from the rotating body. We also assume that the camera has a 60 degree horizontal and 45 degree field of view.
+We make the assumption that a given image lies on a sphere of radius 1 meter away from the rotating body. We also assume that the camera has a 60 degree horizontal and 45 degree vertical field of view.
 
 With these assumptions, we can project every pixel in the image onto a 3D sphere. Then we can inscribe the sphere into a cylinder with radius 1 meter and height 2 meters and project the pixels on the sphere onto the cylinder. Then, we unwrap the cylinder to result with our rectangular panorama.
