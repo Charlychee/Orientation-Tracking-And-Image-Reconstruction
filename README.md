@@ -53,8 +53,12 @@ Our goal is to find the orientations that minimize this cost.
 ```
 
 This can be solved by projected gradient descent:
-$$\text{Projection}: \mathbf{\Pi}(\mathbf{q}) = \frac{\mathbf{q}}{||\mathbf{q}||_2}$$
-$$\mathbf{q}_{1:T}^{(k+1)} \leftarrow \mathbf{\Pi}\left(\mathbf{q}_{1:T}^{(k)} - \alpha \nabla c(\mathbf{q}_{1:T}^{(k)})\right)$$
+```math
+\text{Projection}: \mathbf{\Pi}(\mathbf{q}) = \frac{\mathbf{q}}{||\mathbf{q}||_2}
+```
+```math
+\mathbf{q}_{1:T}^{(k+1)} \leftarrow \mathbf{\Pi}\left(\mathbf{q}_{1:T}^{(k)} - \alpha \nabla c(\mathbf{q}_{1:T}^{(k)})\right)
+```
 
 ## Image Reconstruction
 We make the assumption that a given image lies on a sphere of radius 1 meter away from the rotating body. We also assume that the camera has a 60 degree horizontal and 45 degree field of view.
