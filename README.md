@@ -49,3 +49,7 @@ Our goal is to find the orientations that minimize this cost.
 ```math
 \mathbf{q}_{1:T}^* = \min_{\mathbf{q}_{1:T}} c(\mathbf{q}_{1:T}) : ||\mathbf{q}_t||_2 = 1, \forall t \in \{1, 2, ..., T\}
 ```
+
+This can be solved by projected gradient descent:
+$$\text{Projection}: \mathbf{\Pi}(\mathbf{q}) = \frac{\mathbf{q}}{||\mathbf{q}||_2}$$
+$$\mathbf{q}_{1:T}^{(k+1)} \leftarrow \mathbf{\Pi}\left(\mathbf{q}_{1:T}^{(k)} - \alpha \nabla c(\mathbf{q}_{1:T}^{(k)})\right)$$
